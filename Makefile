@@ -177,8 +177,8 @@ tar: $(C_ALL) $(C_TEST) $(H_ALL) $(PRE_ALL) $(INI_ALL) $(MISC_FILES) $(HYREC) $(
 classy: libclass.a python/classy.pyx python/cclassy.pxd
 	cd python; $(PYTHON) setup.py install --user
 
-clean: .base
-	rm -rf $(WRKDIR);
-	rm -f libclass.a
+clean:
+	rm -rf $(WRKDIR)
+	rm -f libclass.a class
 	rm -f $(MDIR)/python/classy.c
 	rm -rf $(MDIR)/python/build
